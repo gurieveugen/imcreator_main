@@ -551,14 +551,12 @@ function send_coupon( $cf7 ) {
 }
 
 function is_student_email($email){    
-	if( 
-        substr($email, -4) == ".edu" || 
-        substr($email, -3) == ".ac"		
-	){
-		return true;
-	}else{
-		return false;
+	$endings = array('.edu', '.ac');
+	foreach ($endings as $value) 
+	{
+		if(strpos($email, $value) !== false) return true; 
 	}
+	return false;
 }
 function custom_email_validation_filter($result,$tag){    
 	$type = $tag['type'];
