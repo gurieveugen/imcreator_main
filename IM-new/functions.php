@@ -565,7 +565,7 @@ function custom_email_validation_filter($result,$tag){
 		$the_value = $_POST[$name];        
 		if(!is_student_email($the_value)){
 			$result['valid'] = false;
-			$result['reason'][$name] = 'You need to provide .edu or .ac email address.';
+			$result['reason'][$name] = '';			
 		}
 	}
 	return $result;
