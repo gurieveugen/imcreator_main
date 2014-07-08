@@ -5,14 +5,16 @@
  * @subpackage HivistaSoft_Theme
  */
 ?>
+<?php global $matrix_cat_str; global $query_string;  ?>
 <?php
+if($query_string == 'category_name=images') wp_redirect(get_bloginfo('url').'/free');
 $queried_object = get_queried_object();
 $option         = get_option('IM_category_custom_'.$queried_object->term_id);
 ?>
 
 <? get_header(); ?>
 
-<?php global $matrix_cat_str; global $query_string; ?>
+
 
 
 <!-- main -->

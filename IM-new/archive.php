@@ -14,6 +14,7 @@
 		<h1>Tag Archives: <span><?php echo single_tag_title(); ?></span></h1>
 		<div class="images-box">
             <?php global $query_string;
+           
             query_posts( $query_string . '&posts_per_page=15' );
             ?>
 			<? if (have_posts ()) : 

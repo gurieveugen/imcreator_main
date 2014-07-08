@@ -150,15 +150,7 @@ while ( have_posts() ) : the_post(); ?>
 
     				<p>
 
-    					Free for commercial use,
-
-    					<br>
-
-    					Some Rights Reserved.
-
-    					<br>
-
-    					Please keep attribution to the creator.
+    					Free for commercial use, attribution to the creator is required.
 
     				</p>
 
