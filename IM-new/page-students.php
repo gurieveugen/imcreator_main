@@ -55,6 +55,11 @@ if ($imgsrc = get_post_meta(get_the_ID(),'noheaderr',true)) {
                     width_eval();
                 });  
             </script>-->
+            <script type="text/javascript">
+                    jQuery(document).ready(function(){                
+                        jQuery('.image-block .image img').css({'display':'block'}).animate({'opacity': '1'}, 1000);
+                    });              
+            </script>
 			<div class="valign-text">
                 <div class="holder">
                     <h2>Launch Your Career</h2>

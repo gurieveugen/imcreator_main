@@ -117,25 +117,13 @@ $option         = get_option('IM_category_custom_'.$queried_object->term_id);
 
 				// print sub-categories of main category
 				//if ( count($sub_cats) > 0 ) : ?>
-					<div class="box-holder">
-                    <?php
-                    if($option)
-                    {
-                        ?>
-                        <div class="page-promo-box">
-                            <a href="http://www.imcreator.com/button-maker">
-                                <img src="<?php echo $option[0][2]; ?>" alt="Featured image">                               
-                                <span class="overlay"></span>
-                            </a>
-                        </div>    
-                        <?php
-                    }
-                    ?>
+					<div class="box-holder">                   
                     <h2>Collections</h2>
 					<?php
-					foreach ( $sub_cats as $sub_cat ) :
-						$s_c_id = $sub_cat->term_id;
-						$s_c_name = $sub_cat->name;
+                    $counter_items = 0;
+                    foreach ( $sub_cats as $sub_cat ) :
+                        $s_c_id = $sub_cat->term_id;
+                        $s_c_name = $sub_cat->name;
                         $s_c_count = 0;
 						$s_c_count = wp_get_cat_postcount($s_c_id);
 						$s_c_options = $wpdb->get_results( "SELECT option_value FROM ".$wpdb->prefix."options WHERE option_name = 'IM_category_custom_".$s_c_id."'");						
@@ -214,8 +202,32 @@ $option         = get_option('IM_category_custom_'.$queried_object->term_id);
                                     ).trigger("hover");
                                 
                             </script>                           
-						</div>
-					<?php endforeach; ?>
+                        </div>
+                        <?php $counter_items++; ?>
+                        <?php if($counter_items == 3){ ?>
+                        <div class="category-banner">
+                            <a href="#"><img src="<?php bloginfo('template_url'); ?>/images/banner-1.png" alt=""></a>
+                        </div>
+                        <?php } ?>
+					<?php endforeach; ?>                       
+                        <?php 
+                        if($cat->slug == 'free')
+                        {
+                            ?>
+                            <div class="box">
+                                <a class="text" href="/button-maker">
+                                    <span class="holder">
+                                        <h3>Button Maker</h3>
+                                    </span>
+                                </a>
+                                <?php //the_post_thumbnail(array(450,325), array('class'=> 'img')); ?>
+                                <?php //echo get_thumb( get_the_ID(), 450, 325, true ) ; ?>
+                                <img src="http://www.imcreator.com/wp-content/uploads/2014/06/box_iconmaker1-450x325.jpg" alt="Button Maker">
+                            </div>      
+                            <?php
+                        }
+                        ?>
+                        
 					</div>                                       
 				<?php //endif; ?>
 
@@ -322,7 +334,7 @@ $option         = get_option('IM_category_custom_'.$queried_object->term_id);
                                         
                                     </script>                           
         						</div>
-							<?php endforeach; ?>						
+							<?php endforeach; ?>
 						</div>
 					</div>
 				<?php endif; ?>		

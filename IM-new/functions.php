@@ -554,7 +554,7 @@ function is_student_email($email){
 	$endings = array('.edu', '.ac');
 	foreach ($endings as $value) 
 	{
-		if(strpos($email, $value) !== false) return true; 
+		if(strpos(strtolower($email), $value) !== false) return true; 
 	}
 	return false;
 }
