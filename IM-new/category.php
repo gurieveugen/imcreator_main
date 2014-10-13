@@ -204,9 +204,9 @@ $option         = get_option('IM_category_custom_'.$queried_object->term_id);
                             </script>                           
                         </div>
                         <?php $counter_items++; ?>
-                        <?php if($counter_items == 3){ ?>
+                        <?php if($counter_items == 4){ ?>
                         <div class="category-banner">
-                            <a href="#"><img src="<?php bloginfo('template_url'); ?>/images/banner-1.png" alt=""></a>
+                            <?php echo (string) get_option('bannersbanner4'); ?>
                         </div>
                         <?php } ?>
 					<?php endforeach; ?>                       

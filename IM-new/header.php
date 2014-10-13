@@ -17,6 +17,49 @@ Global $TO, $matrix_cat_str;
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
 	<head>
+<!-- One Analytics: 
+ReTargetting via Google Analytics is enabled by running dc.js instead of ga.js
+However, dc.js is an AdWords code that is disabled by AdBlockers
+The solution: if an AdBlocker is on, run the original ga.js instead of dc.js (so that GA data is always collected).
+The method: By default, gaAdsBlocked=true (i.e. assuming AdBlock is on), so ga.js will run.
+The file ./advertising.com changes gaAdsBlocked to false, but this file will only run if AdBlock is off.
+  -- One Analytics-->
+
+<script>
+var gaAdsBlocked=true;
+</script>
+
+<script type="text/javascript" src="http://imcreator.com/wp-content/uploads/2013/01/advertising.js"></script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-21520422-1']);
+  _gaq.push(['_setAllowLinker', true]);
+  _gaq.push(['_addIgnoredRef', 'imcreator.com']);
+  _gaq.push(['_addIgnoredRef', 'i-m.co']);
+  _gaq.push(['_addIgnoredRef', 'i-m.mx']);  
+  _gaq.push(['_addIgnoredRef', '*.appspot.com']);
+  _gaq.push(['_setDomainName', 'imcreator.com']);
+  _gaq.push(['_trackPageview']);
+
+ 
+(function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+
+	if (gaAdsBlocked==true)
+		{
+	   ga.src = ('http:' == document.location.protocol ? 'http://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+ 	   }
+    else
+       	   {
+		   ga.src = ('http:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+        }
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
 
 
 <script>
@@ -37,11 +80,23 @@ function getCookie(c_name) {
 var username=getCookie("expr");
 if (!username) {  
 
+var isChromium = window.chrome,
+    vendorName = window.navigator.vendor;
+if(isChromium !== null && isChromium !== undefined && vendorName === "Google Inc.") {
+   
 random = Math.random() * 100
-if (random < 2){window.location.href='https://www.imxprs.com/?is=5r3w'}
+if (random < 5){window.location.href='https://www.imxprs.com/?is=5r3w'}
 } else {
 
 }
+
+
+} else { 
+   
+//do nothing not chrome
+
+}
+
 
 
 </script>
