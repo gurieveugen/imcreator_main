@@ -313,6 +313,7 @@ $TO->add_option('Banner1','height=7&type=text');
 $TO->add_option('Banner2','height=7&type=text');
 $TO->add_option('Banner3','height=7&type=text');
 $TO->add_option('Banner4','height=7&type=text');
+$TO->add_option('Banner5','height=7&type=text');
 
 
 ?>

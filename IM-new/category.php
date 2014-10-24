@@ -120,6 +120,14 @@ $option         = get_option('IM_category_custom_'.$queried_object->term_id);
 					<div class="box-holder">                   
                     <h2>Collections</h2>
 					<?php
+                    if(isChildren(19, $cat->term_id) AND $cat->slug != 'free')
+                    {
+                        echo '<div class="center-banner">';
+                        echo (string) get_option( 'bannersbanner4' );
+                        echo '</div>';    
+                    }
+                    
+
                     $counter_items = 0;
                     foreach ( $sub_cats as $sub_cat ) :
                         $s_c_id = $sub_cat->term_id;
@@ -186,10 +194,10 @@ $option         = get_option('IM_category_custom_'.$queried_object->term_id);
                                                     timeout: 900,
                                                     pause:   0,
                                                     after: function(el, next_el) {
-                                                        $(next_el).addClass('active');
+                                                        jQuery(next_el).addClass('active');
                                                     },
                                                     before: function(el) {
-                                                        $(el).removeClass('active');
+                                                        jQuery(el).removeClass('active');
                                                     }
                                                 });
                                                 jQuery(this).find("ul").cycle('next');
@@ -204,7 +212,8 @@ $option         = get_option('IM_category_custom_'.$queried_object->term_id);
                             </script>                           
                         </div>
                         <?php $counter_items++; ?>
-                        <?php if($counter_items == 4){ ?>
+                        <?php if($counter_items == 4 && $cat->slug == 'free'){ ?>
+
                         <div class="category-banner">
                             <?php echo (string) get_option('bannersbanner4'); ?>
                         </div>
@@ -225,16 +234,25 @@ $option         = get_option('IM_category_custom_'.$queried_object->term_id);
                                 <img src="http://www.imcreator.com/wp-content/uploads/2014/06/box_iconmaker1-450x325.jpg" alt="Button Maker">
                             </div>      
                             <?php
+                           
                         }
                         ?>
                         
 					</div>                                       
 				<?php //endif; ?>
-
-				<?php // waterfall of post ?>
+                
+				
 				<div class="recent-block">
 					<h2>Recent</h2>
 					<h6>Third Party Intellectual Property Rights Disclaimer- Please read carefully and follow the license terms with respect to each image. Use of images is at the sole responsibility of the user and IM Creator takes no responsibly or liability with respect to any such use.</h6>
+                    <?php 
+                    if($cat->slug == 'free' OR isChildren(19, $cat->term_id) OR isChildren(19, $cat->parent))
+                    {
+                        echo '<div class="center-banner">';
+                        echo (string) get_option( 'bannersbanner5' );
+                        echo '</div>';    
+                    }
+                    ?>
 					<div class="images-box">
                         <div id="ajax-loading">
                             <img width="60" height="60" src="<?php bloginfo('template_url'); ?>/images/loading.gif" alt="loading">
@@ -248,6 +266,14 @@ $option         = get_option('IM_category_custom_'.$queried_object->term_id);
 			// sub-category
 			else :
             ?>
+                <?php
+                if(isChildren(19, $cat->parent) OR $cat->slug == 'free')
+                {
+                    echo '<div class="center-banner">';
+                    echo (string) get_option( 'bannersbanner4' );
+                    echo '</div><div style="clear:both;"></div>';    
+                }
+                ?>
 				<div class="images-box">
                     <div id="ajax-loading">
                         <img src="<?php bloginfo('template_url'); ?>/images/loading.gif" alt="loading">
@@ -261,6 +287,14 @@ $option         = get_option('IM_category_custom_'.$queried_object->term_id);
 					<div class="recent-block">
 						<h2>Other</h2>
 						<h6>Third Party Intellectual Property Rights Disclaimer- Please read carefully and follow the license terms with respect to each image. Use of images is at the sole responsibility of the user and IM Creator takes no responsibly or liability with respect to any such use.</h6>
+                        <?php 
+                        if($cat->slug == 'free' OR isChildren(19, $cat->term_id) OR isChildren(19, $cat->parent))
+                        {
+                            echo '<div class="center-banner">';
+                            echo (string) get_option( 'bannersbanner5' );
+                            echo '</div>';    
+                        }
+                        ?>
 						<div class="box-holder">
 							<?php foreach ( $sub_cats as $sub_cat ) :
 								$s_c_id = $sub_cat->term_id;

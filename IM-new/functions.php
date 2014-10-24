@@ -572,3 +572,35 @@ function custom_email_validation_filter($result,$tag){
 }
 add_filter('wpcf7_validate_email','custom_email_validation_filter', 10, 2); // Email field
 add_filter('wpcf7_validate_email*', 'custom_email_validation_filter', 10, 2); // Req. Email field
+
+function getChild($parent_id)
+{
+	$args = array(
+	    'orderby'           => 'name', 
+	    'order'             => 'ASC',
+	    'hide_empty'        => true, 
+	    'exclude'           => array(), 
+	    'exclude_tree'      => array(), 
+	    'include'           => array(),
+	    'number'            => '', 
+	    'fields'            => 'ids', 
+	    'slug'              => '', 
+	    'parent'            => $parent_id,
+	    'hierarchical'      => true, 
+	    'child_of'          => 0, 
+	    'get'               => '', 
+	    'name__like'        => '',
+	    'description__like' => '',
+	    'pad_counts'        => false, 
+	    'offset'            => '', 
+	    'search'            => '', 
+	    'cache_domain'      => 'core'
+	); 
+	return get_terms(array('category'), $args);
+}
+
+function isChildren($parent_id, $child_id)
+{
+	$childrens = getChild($parent_id);
+	return in_array($child_id, $childrens);
+}

@@ -173,7 +173,22 @@ while ( have_posts() ) : the_post(); ?>
 
 		</div>
 
-		<?php $post_cats = get_the_category();
+		<?php 
+		$cat = wp_get_post_categories(get_the_id(), array('fields' => 'all'));
+		if(is_array($cat))
+		{
+			$cat = $cat[count($cat)-1];
+
+			if(11543 == get_the_ID() OR isChildren(19, $cat->term_id) OR $cat->term_id == 19 OR isChildren(19, $cat->parent))
+			{
+				echo '<div class="center-banner">';
+				echo (string) get_option( 'bannersbanner4' );
+				echo '</div><div style="clear:both;"></div>';
+			}
+		}
+		
+		
+		$post_cats = get_the_category();
 
         $post_cats[0]->cat_name;
 

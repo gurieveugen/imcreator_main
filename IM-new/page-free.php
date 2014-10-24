@@ -180,10 +180,10 @@ query_posts( 'category_name=free' );
                                                     timeout: 900,
                                                     pause:   0,
                                                     after: function(el, next_el) {
-                                                        $(next_el).addClass('active');
+                                                        jQuery(next_el).addClass('active');
                                                     },
                                                     before: function(el) {
-                                                        $(el).removeClass('active');
+                                                        jQuery(el).removeClass('active');
                                                     }
                                                 });
                                                 jQuery(this).find("ul").cycle('next');
