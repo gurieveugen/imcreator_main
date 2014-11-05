@@ -120,7 +120,7 @@ $option         = get_option('IM_category_custom_'.$queried_object->term_id);
 					<div class="box-holder">                   
                     <h2>Collections</h2>
 					<?php
-                    if(isChildren(19, $cat->term_id) AND $cat->slug != 'free')
+                    if(isChildren(19, $cat->term_id) OR $cat->slug == 'free')
                     {
                         echo '<div class="center-banner">';
                         echo (string) get_option( 'bannersbanner4' );

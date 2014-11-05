@@ -3497,3 +3497,10 @@ body.search .main-holder { /*	background: url('images/bg-main-holder.gif') repea
 	cursor:pointer;
 
 }
+.center-banner{
+	margin: 0 0 25px;
+	text-align: center;
+}
+.center-banner img{
+	vertical-align: top;
+}

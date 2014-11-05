@@ -14,7 +14,12 @@
 			<div id="content">
 				<div class="content-holder">
 					<? if (have_posts ()) : ?>
-						<h1>Search Results for: <span> <? echo get_search_query() ?></span></h1>					
+						<h1>Search Results for: <span> <? echo get_search_query() ?></span></h1>
+						<?php
+						echo '<div class="center-banner">';
+                        echo (string) get_option( 'bannersbanner4' );
+                        echo '</div>';    
+						?>					
 						<? include('loop.php'); ?>						
 					<? else : ?>
 					<div class="topic-holder">
@@ -34,6 +39,11 @@
 		<?php else : ?>
 
 			<h1>Search Results for: <span> <? echo get_search_query() ?></span></h1>
+			<?php
+			echo '<div class="center-banner">';
+            echo (string) get_option( 'bannersbanner4' );
+            echo '</div>';    
+			?>		
 			<div class="images-box">
 				
 				<? if (have_posts ()) : 
