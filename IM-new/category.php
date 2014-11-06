@@ -212,10 +212,10 @@ $option         = get_option('IM_category_custom_'.$queried_object->term_id);
                             </script>                           
                         </div>
                         <?php $counter_items++; ?>
-                        <?php if($counter_items == 4 && $cat->slug == 'free'){ ?>
+                        <?php if($counter_items == 8 && $cat->slug == 'free'){ ?>
 
                         <div class="category-banner">
-                            <?php echo (string) get_option('bannersbanner4'); ?>
+                            <?php echo (string) get_option('bannersbanner5'); ?>
                         </div>
                         <?php } ?>
 					<?php endforeach; ?>                       
