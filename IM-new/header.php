@@ -61,7 +61,6 @@ var gaAdsBlocked=true;
   })();
 </script>
 
-
 <script>
 
 function getCookie(c_name) {
@@ -77,29 +76,50 @@ function getCookie(c_name) {
         }
 
 
-var username=getCookie("expr");
-if (!username) {  
 
-var isChromium = window.chrome,
-    vendorName = window.navigator.vendor;
-if(isChromium !== null && isChromium !== undefined && vendorName === "Google Inc.") {
-   
-random = Math.random() * 100
-if (random < 5){window.location.href='https://www.imxprs.com/?is=5r3w'}
+var myCookie = getCookie("im_cookie");
+
+if (myCookie == null) {
+	// cookie doesn't exist - probably a new user
+	window.console&&console.log('new user');
+    
+	if (window.location.href.indexOf("/free") == -1){
+		if (window.location.href.indexOf("/blog") == -1){
+	
+			referrerUrl = document.referrer;
+			if (referrerUrl.indexOf("google") > -1) {
+				//came from Google
+				window.console&&console.log('came from google');
+				
+				rand = Math.round(Math.random() * 100);
+				window.console&&console.log(rand);
+				if (rand < 10){
+					window.location.href='https://www.imxprs.com/'
+				}
+			
+			} else {
+				window.console&&console.log('didnt come from google');
+			}
+		} else {
+			window.console&&console.log('imcreator blog');
+		}
+	} else {
+		window.console&&console.log('im free');
+	}
+	
 } else {
-
+	window.console&&console.log('old user');
+    // do cookie exists stuff
 }
 
 
-} else { 
-   
-//do nothing not chrome
-
-}
 
 
 
 </script>
+
+
+
 		<meta name="p:domain_verify" content="4f697159a05bbbc0f682ddb865379df0"/>				
 
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />

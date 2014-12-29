@@ -296,7 +296,7 @@ a IMG
         
         
         
-        <div style = "left: 0px"><img style = "margin-top: 50px; margin-left: -400px; z-index: 499;" src="http://www.imcreator.com/wp-content/uploads/2014/05/collection_header.png" /></div>
+        <div style = "left: 0px"><img style = "margin-top: 50px; margin-left: -400px; z-index: 499;" src="http://www.imcreator.com/wp-content/uploads/2014/11/winter-2015.gif" /></div>
         <div class="sliderGallery" style = "margin-top: -30px;">
               <div class="wrapper"></div><div class="slider ui-slider">
                 <div class="ui-slider-handle"></div> 
@@ -310,7 +310,7 @@ a IMG
             </div>
 			  <ul>
       
-<li class="file"> <a href="https://app.imcreator.com/preview?vbid=C1ADE52BC25C4CD2B071C0BC9D79E0DE"  target="_blank">
+<li class="file"> <a rel="nofollow" href="https://app.imcreator.com/preview?vbid=C1ADE52BC25C4CD2B071C0BC9D79E0DE"  target="_blank">
                  <span class="preview_btn"><img src="https://im_static.s3.amazonaws.com/preview_btn.png" /></span>
                  <span class="preview"><img src="https://imthumbs.s3.amazonaws.com/vbid_C1ADE52BC25C4CD2B071C0BC9D79E0DE.jpg" /></span>
                  <span class="desc">
@@ -323,7 +323,7 @@ a IMG
                 </li>          
 
 
-<li class="file"> <a href="https://app.imcreator.com/preview?vbid=C454AACAF6A1472C98AF82C600B69DA4"  target="_blank">
+<li class="file"> <a rel="nofollow" href="https://app.imcreator.com/preview?vbid=C454AACAF6A1472C98AF82C600B69DA4"  target="_blank">
                  <span class="preview_btn"><img src="https://im_static.s3.amazonaws.com/preview_btn.png" /></span>
                  <span class="preview"><img src="https://im_static.s3.amazonaws.com/yoshi_sushi.jpg" /></span>
                  <span class="desc">
@@ -335,7 +335,7 @@ a IMG
 			  	 </a>
                 </li>  
 
- <li class="file"> <a href="https://app.imcreator.com/preview?vbid=855914835E6C484F820DD5D5338D40E0"  target="_blank">
+ <li class="file"> <a rel="nofollow" href="https://app.imcreator.com/preview?vbid=855914835E6C484F820DD5D5338D40E0"  target="_blank">
                  <span class="preview_btn"><img src="https://im_static.s3.amazonaws.com/preview_btn.png" /></span>
                  <span class="preview"><img src="https://imthumbs.s3.amazonaws.com/vbid_855914835E6C484F820DD5D5338D40E0.jpg" /></span>
                  <span class="desc">
@@ -349,7 +349,7 @@ a IMG
 
 
 
-<li class="file"> <a href="https://app.imcreator.com/preview?vbid=5C5B0A50F1244DC38AEF9B8AD6EBAC77"  target="_blank">
+<li class="file"> <a rel="nofollow" href="https://app.imcreator.com/preview?vbid=5C5B0A50F1244DC38AEF9B8AD6EBAC77"  target="_blank">
                  <span class="preview_btn"><img src="https://im_static.s3.amazonaws.com/preview_btn.png" /></span>
                  <span class="preview"><img src="https://imthumbs.s3.amazonaws.com/vbid_5C5B0A50F1244DC38AEF9B8AD6EBAC77.jpg" /></span>
                  <span class="desc">
@@ -361,7 +361,7 @@ a IMG
 			  	 </a>
                 </li> 
 
-<li class="file"> <a href="https://app.imcreator.com/preview?vbid=C63EB35569D2475589EA175C533FE4E5"  target="_blank">
+<li class="file"> <a rel="nofollow" href="https://app.imcreator.com/preview?vbid=C63EB35569D2475589EA175C533FE4E5"  target="_blank">
                  <span class="preview_btn"><img src="https://im_static.s3.amazonaws.com/preview_btn.png" /></span>
                  <span class="preview"><img src="https://imthumbs.s3.amazonaws.com/vbid_C63EB35569D2475589EA175C533FE4E5.jpg" /></span>
                  <span class="desc">
@@ -377,7 +377,7 @@ a IMG
 
 
 
-<li class="file"> <a href="https://app.imcreator.com/preview?vbid=FD5ACF4ABDD74286BB42B554423AF0D9"  target="_blank">
+<li class="file"> <a rel="nofollow" href="https://app.imcreator.com/preview?vbid=FD5ACF4ABDD74286BB42B554423AF0D9"  target="_blank">
                  <span class="preview_btn"><img src="https://im_static.s3.amazonaws.com/preview_btn.png" /></span>
                  <span class="preview"><img src="https://im_static.s3.amazonaws.com/lakes_in.jpg" /></span>
                  <span class="desc">
@@ -390,7 +390,7 @@ a IMG
                 </li>   
 
 
-<li class="file"> <a href="https://app.imcreator.com/preview?vbid=5DCEC7F9A03344B3AA296A954F4DF44D"  target="_blank">
+<li class="file"> <a rel="nofollow" href="https://app.imcreator.com/preview?vbid=5DCEC7F9A03344B3AA296A954F4DF44D"  target="_blank">
                  <span class="preview_btn"><img src="https://im_static.s3.amazonaws.com/preview_btn.png" /></span>
                  <span class="preview"><img src="https://im_static.s3.amazonaws.com/interia_black.jpg" /></span>
                  <span class="desc">
@@ -405,7 +405,7 @@ a IMG
 
  
 
-<li class="file"> <a href="https://app.imcreator.com/preview?vbid=C04E39E3AF57448E84D8D1FF36E6D5CC"  target="_blank">
+<li class="file"> <a rel="nofollow" href="https://app.imcreator.com/preview?vbid=C04E39E3AF57448E84D8D1FF36E6D5CC"  target="_blank">
                  <span class="preview_btn"><img src="https://im_static.s3.amazonaws.com/preview_btn.png" /></span>
                  <span class="preview"><img src="https://im_static.s3.amazonaws.com/interia_white.jpg" /></span>
                  <span class="desc">
@@ -422,7 +422,7 @@ a IMG
 
 
 
-<li class="file"> <a href="https://app.imcreator.com/preview?vbid=12EED6F222364D3C8333B1A17B10AF03"  target="_blank">
+<li class="file"> <a rel="nofollow" href="https://app.imcreator.com/preview?vbid=12EED6F222364D3C8333B1A17B10AF03"  target="_blank">
                  <span class="preview_btn"><img src="https://im_static.s3.amazonaws.com/preview_btn.png" /></span>
                  <span class="preview"><img src="https://im_static.s3.amazonaws.com/antonio_sabatti.jpg" /></span>
                  <span class="desc">
@@ -659,7 +659,7 @@ text-decoration: none;
 	<div class='footer_col'>
 		<h4>Website Templates</h4>
 		<ul>
-			<li><a href="http://app.imcreator.com/new">Popular</a></li>
+			<li><a rel="nofollow" href="http://app.imcreator.com/new">Popular</a></li>
 			<li><a href="http://www.imcreator.com/templates/wedding">Wedding</a></li>
 			<li><a href="http://www.imcreator.com/templates/blog">Blog</a></li>
 			<li><a href="http://www.imcreator.com/templates/fashion">Fashion</a></li>
@@ -678,7 +678,7 @@ text-decoration: none;
 	</div>
 	
 	<div class='footer_col'>
-		<h4>Support & Contact</h4>
+		<h4>Support</h4>
 		<ul>
 			<li><a href="http://imcreator.com/create-a-website">Manual</a></li>
 			<li><a href="http://imcreator.com/category/howto">How-tos</a></li>
@@ -694,8 +694,8 @@ text-decoration: none;
 		<ul>
 			<li><a href="http://www.imcreator.com/free">IM Free</a></li>
 			<li><a href="http://ixm.imcreator.com">IXM Mobile Builder</a></li>
-			<li><a href="http://apps.imcreator.com">AppSite</a></li>
-			<li><a href="http://thenextweb.com/apps/2011/08/16/im-creator-takes-on-squarespace-with-an-easy-way-to-build-beautiful-websites-in-your-browser/">The Next Web</a>
+			<li><a rel="nofollow"href="http://apps.imcreator.com">AppSite</a></li>
+			<li><a rel="nofollow" href="http://thenextweb.com/apps/2011/08/16/im-creator-takes-on-squarespace-with-an-easy-way-to-build-beautiful-websites-in-your-browser/">The Next Web</a>
 			<li><a href="http://www.imcreator.com/review">IM Creator Reviews</a>
 			<li><a href="http://www.imcreator.com/button-maker">Button Maker</a>
 </li>
@@ -728,7 +728,7 @@ text-decoration: none;
 
 
 					<a href="<?=bloginfo('url');?>" class="footer-logo">IM-CREATOR.COM</a>
-					<span class="copyright"><?=$TO->get_option('copy','footer');?><a>    |    </a><a href="http://imcreator.com/terms-of-service">Terms of Service</a></span>
+					<span class="copyright"><?=$TO->get_option('copy','footer');?><a>    |    </a><a rel="nofollow" href="http://imcreator.com/terms-of-service">Terms of Service</a></span>
 				</div>
 			</div>
 		</div>
