@@ -264,8 +264,7 @@ if (myCookie == null) {
 
 						},
 
-						success: function(data) {                            
-
+						success: function(data) {      
 							if (data.length > 0) {
                                 data = data.replace(/class="box"/g, 'class="box hidden"');
                                 data = data.replace(/class="box-banner/g, 'class="box-banner hidden"');
@@ -281,12 +280,15 @@ if (myCookie == null) {
                                             jQuery(this).parent().parent().removeClass('hidden');
                                         });
                                         counter++;
+                                        console.log(imgLength, ':', counter);
                                         if(counter == imgLength) {
                                             jQuery('#ajax-loading').hide();
                                             imgLoading = true;
                                         }
                                     });
                                 });
+                                jQuery('#ajax-loading').hide();
+                                imgLoading = true;
 							} else {
                                 jQuery('#ajax-loading').hide();
 							}
