@@ -223,7 +223,7 @@ $option         = get_option('IM_category_custom_'.$queried_object->term_id);
                         if($cat->slug == 'free')
                         {
                             ?>
-                            <div class="box">
+                            <div class="box" data-a>
                                 <a class="text" href="/button-maker">
                                     <span class="holder">
                                         <h3>Button Maker</h3>
