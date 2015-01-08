@@ -298,38 +298,54 @@ function display_waterfall_of_posts ( $cid = '', $except_pid = '', $page = '', $
 			$content .= '</div>';
 			$content .= '</a>';
 			$content .= '</div>';
+			
             if ($im_banner_count > 0) {
                 if ($w_post_counter%15 == 0){
-                    switch ($im_banner_order) :
-                        case "byName":                            
-                            switch ($im_banner_count) :
-                                case 1 :
-                                    $content .= '<div class="box-banner">';
-                                    $content .= $im_banners[0];
-                                    $content .= '</div>';
-                                break;
-                                case 2 :
-                                    $content .= '<div class="box-banner">';
-                                    $content .= $im_banners[$_SESSION['im_banner_counter']];
-                                    $content .= '</div>';
-                                    $_SESSION['im_banner_counter']++;
-                                    if ($_SESSION['im_banner_counter'] > 1) $_SESSION['im_banner_counter'] = 0;                                 
-                                break;
-                                case 3 :                                                                        
-                                    $content .= '<div class="box-banner">';
-                                    $content .= $im_banners[$_SESSION['im_banner_counter']];
-                                    $content .= '</div>';
-                                    $_SESSION['im_banner_counter']++;
-                                    if ($_SESSION['im_banner_counter'] > 2) $_SESSION['im_banner_counter'] = 0;
-                                break;
-                            endswitch;
-                        break;
-                        case "rand":
-                            $content .= '<div class="'.$class.'">';
-                            $content .= array_rand($im_banners);
-                            $content .= '</div>';
-                        break;
-                    endswitch;
+            		switch ($im_banner_order) :
+            		    case "byName":                            
+            		        switch ($im_banner_count) :
+            		            case 1 :
+            		            	if(isImg($im_banners[0]))
+            		            	{
+            		            		$content .= '<div class="box-banner">';
+            		            		$content .= $im_banners[0];
+            		            		$content .= '</div>';
+            		            	}
+            		               
+            		            break;
+            		            case 2 :
+            		            	if(isImg($im_banners[$_SESSION['im_banner_counter']]))
+            		            	{
+            		            		$content .= '<div class="box-banner">';
+            		            		$content .= $im_banners[$_SESSION['im_banner_counter']];
+            		            		$content .= '</div>'; 
+            		            	}
+            		                $_SESSION['im_banner_counter']++;
+            		            	if ($_SESSION['im_banner_counter'] > 1) $_SESSION['im_banner_counter'] = 0;       
+            		            break;
+            		            case 3 :  
+            		            	if(isImg($im_banners[$_SESSION['im_banner_counter']]))
+            		            	{
+            		            		$content .= '<div class="box-banner">';
+            		            		$content .= $im_banners[$_SESSION['im_banner_counter']];
+            		            		$content .= '</div>';
+            		            	}     
+            		            	$_SESSION['im_banner_counter']++;
+            		            	if ($_SESSION['im_banner_counter'] > 2) $_SESSION['im_banner_counter'] = 0;        
+            		            break;
+            		        endswitch;
+            		    break;
+            		    case "rand":
+            		    	$rand .= array_rand($im_banners);
+            		    	if(isImg($rand))
+            		    	{
+            		    		$content .= '<div class="'.$class.'" data-rand>';
+            		    		$content .= $rand;
+            		    		$content .= '</div>';
+            		    	}
+            		    break;
+            		endswitch;
+                	
                 }
             }
             
@@ -338,6 +354,12 @@ function display_waterfall_of_posts ( $cid = '', $except_pid = '', $page = '', $
 		//wp_reset_postdata();		
 	} 
 	echo $content;
+}
+
+function isImg($str = '')
+{
+	if(strpos($str, '<img') === false) return false;
+	return true;
 }
 
 function get_thumb($attach_id, $width, $height, $crop = false) {
