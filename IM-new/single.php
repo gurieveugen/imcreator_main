@@ -38,6 +38,7 @@ while ( have_posts() ) : the_post(); ?>
 				
 				<?php 
 				$img = get_field( 'featured_image_url', get_the_id()); 
+				
 				if(strlen(trim($img)))
 				{
 					$img = setGoogleImageSize($img, 620);
