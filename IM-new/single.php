@@ -35,12 +35,23 @@ while ( have_posts() ) : the_post(); ?>
                     <a href="<?php echo $download_link; ?>" target="_blank">
 
                 <?php } ?>
+				
+				<?php 
+				$img = get_field( 'featured_image_url', get_the_id()); 
+				if(strlen(trim($img)))
+				{
+					$img = setGoogleImageSize($img, 620);
+					echo '<img src="'.$img.'" alt="Picture">';
+				}
+				else
+				{
+					if ( has_post_thumbnail() ) {
 
-				<?php if ( has_post_thumbnail() ) {
+						the_post_thumbnail( array(620,9999));
 
-					the_post_thumbnail( array(620,9999));
-
-				} ?>
+					} 	
+				}
+				?>
 
                 <?php if ( strlen($download_link)) { ?>
 

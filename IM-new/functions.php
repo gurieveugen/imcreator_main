@@ -4,9 +4,19 @@
  * @subpackage HivistaSoft_Theme
  */
 session_start();
-error_reporting(0);
+if(isset($_GET['debug']))
+{
+	ini_set('display_startup_errors',1);
+	ini_set('display_errors',1);
+	error_reporting(-1);
+}
+else
+{
+	error_reporting(0);	
+}
 
 include('theme-admin.php');
+
 
 global $matrix_cat_str, $im_banners;
 $matrix_cat_str = $TO->get_option('check-cat');
@@ -288,9 +298,20 @@ function display_waterfall_of_posts ( $cid = '', $except_pid = '', $page = '', $
             
             //content html
 			$content .= '<div class="'.$class.'">';
-			if ( has_post_thumbnail() ) {				
-				$content .= get_the_post_thumbnail($post->ID, 'post-matrix');
+
+			$img = get_field( 'featured_image_url', get_the_id()); 
+			if(strlen(trim($img)))
+			{
+				$img = setGoogleImageSize($img, 296);
+				$content .= '<img src="'.$img.'" alt="Picture">';
 			}
+			else
+			{
+				if ( has_post_thumbnail() ) {				
+					$content .= get_the_post_thumbnail($post->ID, 'post-matrix');
+				}	
+			}
+			
 			$content .= '<a href="'.$wp_permalink.'" class="image">';
 			$content .= '<div class="text">';
 			$content .= '<h4>'. $wp_title .'</h4>';
@@ -625,4 +646,11 @@ function isChildren($parent_id, $child_id)
 {
 	$childrens = getChild($parent_id);
 	return in_array($child_id, $childrens);
+}
+
+
+function setGoogleImageSize($str, $size = 500)
+{
+	$str = preg_replace('/=.*/', '', $str);
+	return $str.'=s'.$size;
 }
