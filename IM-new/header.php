@@ -270,6 +270,23 @@ if (myCookie == null) {
                                 data = data.replace(/class="box-banner/g, 'class="box-banner hidden"');
                                 newHTML = jQuery(data);
 								jQuery('.images-box').append(newHTML).masonry( 'appended', newHTML, true );
+
+								setTimeout(
+									function(){
+										jQuery('.images-box').masonry('reloadItems');
+										jQuery('.images-box').masonry('layout');
+									},
+									500
+								);
+
+								setTimeout(
+									function(){
+										jQuery('.images-box').masonry('reloadItems');
+										jQuery('.images-box').masonry('layout');
+									},
+									1000
+								);
+
 								add_height();
                                 var imgLength = jQuery('.images-box .hidden img').length ;
                                 var counter = 0;
